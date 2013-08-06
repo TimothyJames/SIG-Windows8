@@ -1,0 +1,5 @@
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.DataModel\bin\Debug\DatumPrikker.DataModel.dll
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.DataModel\bin\Debug\DatumPrikker.DataModel.pdb
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.csprojResolveAssemblyReference.cache
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.dll
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.pdb

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SIG-WIN8</Machine>
+    <WindowsUser>Ciber Developer</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>4660558B309FD90710444C6F59F93979F90C842AF5AAB6C15FBCEF3ADAD41410</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>27da554c-989b-41f4-8f8a-2d87bad68b24_1.0.0.0_neutral__sq26sjney6gf4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>27da554c-989b-41f4-8f8a-2d87bad68b24_sq26sjney6gf4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>27da554c-989b-41f4-8f8a-2d87bad68b24</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Ciber Developer</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-08-06T19:18:34.411</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.exe">
+      <PackagePath>DatumPrikker.UI.exe</PackagePath>
+      <Modified>2013-08-06T19:18:34.190</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.pdb">
+      <PackagePath>DatumPrikker.UI.pdb</PackagePath>
+      <Modified>2013-08-06T19:18:34.160</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T18:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-08-06T17:15:50.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T14:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\Dashboard.xaml">
+      <PackagePath>Frames\Dashboard.xaml</PackagePath>
+      <Modified>2013-08-06T19:18:33.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\Register.xaml">
+      <PackagePath>Frames\Register.xaml</PackagePath>
+      <Modified>2013-08-06T19:18:16.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-08-06T19:10:38.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-08-06T19:05:13.338</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
