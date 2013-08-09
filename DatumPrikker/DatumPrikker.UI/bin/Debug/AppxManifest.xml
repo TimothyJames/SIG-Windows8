@@ -22,9 +22,12 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="DatumPrikker.UI.exe" EntryPoint="DatumPrikker.UI.App">
-      <VisualElements DisplayName="DatumPrikker.UI" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="DatumPrikker.UI" ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="DatumPrikker.UI" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="DatumPrikker.UI" ForegroundText="light" BackgroundColor="#54038E">
         <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#54038E" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
       </VisualElements>
     </Application>
   </Applications>
