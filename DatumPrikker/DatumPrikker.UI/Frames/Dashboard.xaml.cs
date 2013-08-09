@@ -1,5 +1,4 @@
-﻿using DatumPrikker.UI.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,7 +19,7 @@ namespace DatumPrikker.UI.Frames
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Dashboard : Page
+    public sealed partial class Dashboard : DatumPrikker.UI.Common.LayoutAwarePage
     {
         public Dashboard()
         {
@@ -34,11 +33,27 @@ namespace DatumPrikker.UI.Frames
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            base.OnNavigatedTo(e);
         }
 
-        private void btnHome_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Invoked when this page is about to be displayed in a Frame.
+        /// </summary>
+        /// <param name="e">Event data that describes how this page was reached.  The Parameter
+        /// property is typically used to configure the page.</param>
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            Navigation.GoTo(typeof(MainPage));
+            base.OnNavigatedFrom(e);
+        }
+
+        private void btnRequests_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Requests));
+        }
+
+        private void btnAddressBook_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AddressBook));
         }
     }
 }

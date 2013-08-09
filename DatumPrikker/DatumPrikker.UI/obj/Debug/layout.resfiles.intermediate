@@ -4,6 +4,9 @@ Assets\SplashScreen.png
 Assets\StoreLogo.png
 App.xaml
 Common\StandardStyles.xaml
+Frames\AddressBook.xaml
 Frames\Dashboard.xaml
 Frames\Register.xaml
+Frames\Requests.xaml
 MainPage.xaml
+Common\ReadMe.txt

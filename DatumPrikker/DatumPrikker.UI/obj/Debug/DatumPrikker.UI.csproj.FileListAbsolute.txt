@@ -31,3 +31,48 @@ C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikk
 C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Register.g.cs
 C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Dashboard.xaml
 C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Register.xaml
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\AddressBook.g.i.cs
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\AddressBook.g.cs
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\AddressBook.xaml
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Requests.g.i.cs
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Requests.g.cs
+C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Requests.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.exe
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.pdb
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\resources.pri
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppxManifest.xml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.build.appxrecipe
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\App.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\App.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\AddressBook.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\AddressBook.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Dashboard.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Dashboard.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Register.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Register.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Requests.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Requests.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\MainPage.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\MainPage.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\App.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Common\StandardStyles.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\AddressBook.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Dashboard.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Register.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\Requests.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\MainPage.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\DatumPrikker.UI.exe
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\DatumPrikker.UI.pdb
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\priconfig.xml.intermediate
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\layout.resfiles.intermediate
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\resources.resfiles.intermediate
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\pri.resfiles.intermediate
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\priconfig.xml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\layout.resfiles
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\resources.resfiles
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\pri.resfiles
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\LanguageQualifiers.txt
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\ProjectArchitectures.txt

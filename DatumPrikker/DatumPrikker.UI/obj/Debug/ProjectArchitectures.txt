@@ -1,1 +1,1 @@
-C:\Users\Developer\documents\visual studio 2012\Projects\DatumPrikker\DatumPrikker.UI\DatumPrikker.UI.csproj;neutral
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\DatumPrikker.UI.csproj;neutral
