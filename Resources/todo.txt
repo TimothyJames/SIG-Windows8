@@ -1,0 +1,18 @@
+Taken						Wie		Afgerond
+---------------------------------------------------------------------------
+SQL Compact Toevoegen				DB		06-10-2013
+
+Register form + Login				DB		20-10-2013
+	Maak een register new user formulier
+	Maak werkende login functionaliteit op basis van de register functionaliteit
+
+Settings menu & app bar				DP		20-10-2013
+	Voeg de app-bar toe aan de app, en toon een uitbreidbaar settings menu
+	Voeg een logout functie aan de applicatie
+
+Adresboek 					JK		20-10-2013
+	Voeg nieuwe gebruikers toe aan de DB (onder je eigen account) en toon contactpersonen dit in het dashboard
+
+Uitnodigingen					CN		20-10-2013
+	Uitnodigingen van andere gebruikers moeten getoond worden op het dashboard scherm
+
