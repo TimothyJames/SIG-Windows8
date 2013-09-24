@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-09T11:09:36.510</Modified>
+      <Modified>2013-09-24T16:32:45.126</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.exe">
       <PackagePath>DatumPrikker.UI.exe</PackagePath>
-      <Modified>2013-08-09T11:09:34.701</Modified>
+      <Modified>2013-09-24T16:52:02.954</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.pdb">
       <PackagePath>DatumPrikker.UI.pdb</PackagePath>
-      <Modified>2013-08-09T11:09:34.603</Modified>
+      <Modified>2013-09-24T16:52:02.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -78,11 +78,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-08-09T09:53:54.917</Modified>
+      <Modified>2013-09-24T16:52:00.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-08-09T11:09:35.334</Modified>
+      <Modified>2013-09-24T16:32:44.109</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
