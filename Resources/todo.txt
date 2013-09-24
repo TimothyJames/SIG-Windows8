@@ -2,17 +2,24 @@ Taken						Wie		Afgerond
 ---------------------------------------------------------------------------
 SQL Compact Toevoegen				DB		06-10-2013
 
-Register form + Login				DB		20-10-2013
+Register form + Login				DB		29-10-2013
 	Maak een register new user formulier
 	Maak werkende login functionaliteit op basis van de register functionaliteit
 
-Settings menu & app bar				DP		20-10-2013
+Settings menu & app bar				DP		29-10-2013
 	Voeg de app-bar toe aan de app, en toon een uitbreidbaar settings menu
 	Voeg een logout functie aan de applicatie
 
-Adresboek 					JK		20-10-2013
+Adresboek 					JK		29-10-2013
 	Voeg nieuwe gebruikers toe aan de DB (onder je eigen account) en toon contactpersonen dit in het dashboard
 
-Uitnodigingen					CN		20-10-2013
+Uitnodigingen					CN		29-10-2013
 	Uitnodigingen van andere gebruikers moeten getoond worden op het dashboard scherm
 
+Vergaderingen					GJ		29-10-2013
+	Opzet nieuwe vergadering maken en integratie met Adresboek en Uitnodigingen doen.
+
+
+** LET OP **
+Het doel is dat we qua functionaliteit de website van datumprikker.nl nabouwen!
+Houd hier dan ook rekening mee bij je app.
