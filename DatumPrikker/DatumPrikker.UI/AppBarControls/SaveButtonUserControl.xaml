@@ -10,6 +10,6 @@
     d:DesignWidth="100">
     
     <Grid>
-        <Button x:Name="Save" Style="{StaticResource SaveAppBarButtonStyle}" Tag="Save"/>
+        <Button x:Name="Save" Style="{StaticResource SaveAppBarButtonStyle}" Tag="Save" Click="btnSave_Click"/>
     </Grid>
 </UserControl>

@@ -113,6 +113,9 @@
     <Compile Include="AppBarControls\AddAddressButtonUserControl.xaml.cs">
       <DependentUpon>AddAddressButtonUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AppBarControls\CancelButtonUserControl.xaml.cs">
+      <DependentUpon>CancelButtonUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppBarControls\SignOutButtonUserControl.xaml.cs">
       <DependentUpon>SignOutButtonUserControl.xaml</DependentUpon>
     </Compile>
@@ -181,6 +184,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="AppBarControls\AddAddressButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\CancelButtonUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

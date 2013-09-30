@@ -466,16 +466,16 @@
         <Setter Property="AutomationProperties.Name" Value="Add Address"/>
         <Setter Property="Content" Value="&#xE109;"/>
     </Style>
+    <Style x:Key="CancelAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
+        <Setter Property="AutomationProperties.AutomationId" Value="CancelAppBarButton"/>
+        <Setter Property="AutomationProperties.Name" Value="Cancel"/>
+        <Setter Property="Content" Value="&#xE10A;"/>
+    </Style>
     <!--
     <Style x:Key="RemoveAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="RemoveAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="Remove"/>
         <Setter Property="Content" Value="&#xE108;"/>
-    </Style>
-    <Style x:Key="NoAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
-        <Setter Property="AutomationProperties.AutomationId" Value="NoAppBarButton"/>
-        <Setter Property="AutomationProperties.Name" Value="No"/>
-        <Setter Property="Content" Value="&#xE10A;"/>
     </Style>
     <Style x:Key="YesAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="YesAppBarButton"/>

@@ -116,31 +116,33 @@ namespace DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo
 
         private object Activate_1_AddAddressButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.AddAddressButtonUserControl(); }
 
-        private object Activate_2_SignOutButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.SignOutButtonUserControl(); }
+        private object Activate_2_CancelButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.CancelButtonUserControl(); }
 
-        private object Activate_3_HelpButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.HelpButtonUserControl(); }
+        private object Activate_3_SignOutButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.SignOutButtonUserControl(); }
 
-        private object Activate_4_DeleteButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.DeleteButtonUserControl(); }
+        private object Activate_4_HelpButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.HelpButtonUserControl(); }
 
-        private object Activate_5_SaveButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.SaveButtonUserControl(); }
+        private object Activate_5_DeleteButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.DeleteButtonUserControl(); }
 
-        private object Activate_6_EditButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.EditButtonUserControl(); }
+        private object Activate_6_SaveButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.SaveButtonUserControl(); }
 
-        private object Activate_7_LayoutAwarePage() { return new global::DatumPrikker.UI.Common.LayoutAwarePage(); }
+        private object Activate_7_EditButtonUserControl() { return new global::DatumPrikker.UI.AppBarControls.EditButtonUserControl(); }
 
-        private object Activate_8_AddressBook() { return new global::DatumPrikker.UI.Frames.AddressBook(); }
+        private object Activate_8_LayoutAwarePage() { return new global::DatumPrikker.UI.Common.LayoutAwarePage(); }
 
-        private object Activate_9_Dashboard() { return new global::DatumPrikker.UI.Frames.Dashboard(); }
+        private object Activate_9_AddressBook() { return new global::DatumPrikker.UI.Frames.AddressBook(); }
 
-        private object Activate_10_Register() { return new global::DatumPrikker.UI.Frames.Register(); }
+        private object Activate_10_Dashboard() { return new global::DatumPrikker.UI.Frames.Dashboard(); }
 
-        private object Activate_11_Requests() { return new global::DatumPrikker.UI.Frames.Requests(); }
+        private object Activate_11_Register() { return new global::DatumPrikker.UI.Frames.Register(); }
 
-        private object Activate_12_MainPage() { return new global::DatumPrikker.UI.MainPage(); }
+        private object Activate_12_Requests() { return new global::DatumPrikker.UI.Frames.Requests(); }
 
-        private object Activate_13_HelpFlyout() { return new global::DatumPrikker.UI.SettingsFlyout.HelpFlyout(); }
+        private object Activate_13_MainPage() { return new global::DatumPrikker.UI.MainPage(); }
 
-        private object Activate_14_StandardFlyout() { return new global::DatumPrikker.UI.SettingsFlyout.StandardFlyout(); }
+        private object Activate_14_HelpFlyout() { return new global::DatumPrikker.UI.SettingsFlyout.HelpFlyout(); }
+
+        private object Activate_15_StandardFlyout() { return new global::DatumPrikker.UI.SettingsFlyout.StandardFlyout(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -170,81 +172,87 @@ namespace DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
+            case "DatumPrikker.UI.AppBarControls.CancelButtonUserControl":
+                userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.AppBarControls.CancelButtonUserControl), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_2_CancelButtonUserControl;
+                xamlType = userType;
+                break;
+
             case "DatumPrikker.UI.AppBarControls.SignOutButtonUserControl":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.AppBarControls.SignOutButtonUserControl), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_2_SignOutButtonUserControl;
+                userType.Activator = Activate_3_SignOutButtonUserControl;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.AppBarControls.HelpButtonUserControl":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.AppBarControls.HelpButtonUserControl), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_3_HelpButtonUserControl;
+                userType.Activator = Activate_4_HelpButtonUserControl;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.AppBarControls.DeleteButtonUserControl":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.AppBarControls.DeleteButtonUserControl), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_4_DeleteButtonUserControl;
+                userType.Activator = Activate_5_DeleteButtonUserControl;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.AppBarControls.SaveButtonUserControl":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.AppBarControls.SaveButtonUserControl), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_5_SaveButtonUserControl;
+                userType.Activator = Activate_6_SaveButtonUserControl;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.AppBarControls.EditButtonUserControl":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.AppBarControls.EditButtonUserControl), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_6_EditButtonUserControl;
+                userType.Activator = Activate_7_EditButtonUserControl;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.Common.LayoutAwarePage":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.Common.LayoutAwarePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_LayoutAwarePage;
+                userType.Activator = Activate_8_LayoutAwarePage;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.Frames.AddressBook":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.Frames.AddressBook), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_8_AddressBook;
+                userType.Activator = Activate_9_AddressBook;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.Frames.Dashboard":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.Frames.Dashboard), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_9_Dashboard;
+                userType.Activator = Activate_10_Dashboard;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.Frames.Register":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.Frames.Register), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_10_Register;
+                userType.Activator = Activate_11_Register;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.Frames.Requests":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.Frames.Requests), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_11_Requests;
+                userType.Activator = Activate_12_Requests;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.MainPage":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.MainPage), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_12_MainPage;
+                userType.Activator = Activate_13_MainPage;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.SettingsFlyout.HelpFlyout":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.SettingsFlyout.HelpFlyout), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_13_HelpFlyout;
+                userType.Activator = Activate_14_HelpFlyout;
                 xamlType = userType;
                 break;
 
             case "DatumPrikker.UI.SettingsFlyout.StandardFlyout":
                 userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.SettingsFlyout.StandardFlyout), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_14_StandardFlyout;
+                userType.Activator = Activate_15_StandardFlyout;
                 xamlType = userType;
                 break;
 

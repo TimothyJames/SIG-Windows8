@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="DatumPrikker.UI.AppBarControls.SaveButtonUserControl"
+    x:Class="DatumPrikker.UI.AppBarControls.CancelButtonUserControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DatumPrikker.UI.AppBarControls"
@@ -10,7 +10,6 @@
     d:DesignWidth="100">
     
     <Grid>
-        <Button x:ConnectionId='1' x:Name="Save" Style="{StaticResource SaveAppBarButtonStyle}" Tag="Save"                      />
+        <Button x:Name="Cancel" Style="{StaticResource CancelAppBarButtonStyle}" Tag="Cancel" Click="btnCancel_Click"/>
     </Grid>
 </UserControl>
-

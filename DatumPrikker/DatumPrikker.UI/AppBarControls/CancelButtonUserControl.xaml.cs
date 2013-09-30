@@ -16,16 +16,16 @@ using Windows.UI.Xaml.Navigation;
 
 namespace DatumPrikker.UI.AppBarControls
 {
-    public sealed partial class SignOutButtonUserControl : UserControl
+    public sealed partial class CancelButtonUserControl : UserControl
     {
-        public SignOutButtonUserControl()
+        public CancelButtonUserControl()
         {
             this.InitializeComponent();
         }
-        private void btnSignOut_Click(object sender, RoutedEventArgs e)
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(MainPage));
+            rootFrame.GoBack();
         }
     }
 }

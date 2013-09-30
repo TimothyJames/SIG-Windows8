@@ -5,6 +5,7 @@ Assets\StoreLogo.png
 App.xaml
 AppBarControls\AddAddressButtonUserControl.xaml
 AppBarControls\AddRequestButtonUserControl.xaml
+AppBarControls\CancelButtonUserControl.xaml
 AppBarControls\DeleteButtonUserControl.xaml
 AppBarControls\EditButtonUserControl.xaml
 AppBarControls\HelpButtonUserControl.xaml
