@@ -107,11 +107,33 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AppBarControls\AddRequestButtonUserControl.xaml.cs">
+      <DependentUpon>AddRequestButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppBarControls\AddAddressButtonUserControl.xaml.cs">
+      <DependentUpon>AddAddressButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppBarControls\SignOutButtonUserControl.xaml.cs">
+      <DependentUpon>SignOutButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppBarControls\HelpButtonUserControl.xaml.cs">
+      <DependentUpon>HelpButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppBarControls\DeleteButtonUserControl.xaml.cs">
+      <DependentUpon>DeleteButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppBarControls\SaveButtonUserControl.xaml.cs">
+      <DependentUpon>SaveButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppBarControls\EditButtonUserControl.xaml.cs">
+      <DependentUpon>EditButtonUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\BooleanNegationConverter.cs" />
     <Compile Include="Common\BooleanToVisibilityConverter.cs" />
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SettingsCharm.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Frames\AddressBook.xaml.cs">
       <DependentUpon>AddressBook.xaml</DependentUpon>
@@ -129,6 +151,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsFlyout\HelpFlyout.xaml.cs">
+      <DependentUpon>HelpFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsFlyout\StandardFlyout.xaml.cs">
+      <DependentUpon>StandardFlyout.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -148,6 +176,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AppBarControls\AddRequestButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\AddAddressButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\SignOutButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\HelpButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\DeleteButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\SaveButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\EditButtonUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Common\StandardStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -171,6 +227,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SettingsFlyout\HelpFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsFlyout\StandardFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
