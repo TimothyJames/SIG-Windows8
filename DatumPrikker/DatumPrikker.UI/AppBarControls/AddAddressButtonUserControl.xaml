@@ -10,6 +10,6 @@
     d:DesignWidth="100">
     
     <Grid>
-        <Button x:Name="AddAddress" Style="{StaticResource AddAddressAppBarButtonStyle}" Tag="Add Address"/>
+        <Button x:Name="AddAddress" Style="{StaticResource AddAddressAppBarButtonStyle}" Tag="Add Address" Click="btnAdd_Click"/>
     </Grid>
 </UserControl>

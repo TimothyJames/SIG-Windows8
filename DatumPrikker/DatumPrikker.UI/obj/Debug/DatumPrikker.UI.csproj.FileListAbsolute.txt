@@ -106,3 +106,12 @@ C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\ob
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\AppBarControls\CancelButtonUserControl.g.i.cs
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\AppBarControls\CancelButtonUserControl.g.cs
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\AppBarControls\CancelButtonUserControl.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\New\AddAddress.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\New\AddAddress.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\New\AddRequests.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\New\AddRequests.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\New\AddAddress.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Frames\New\AddRequests.xaml
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Common\DateTimePicker\DatePicker.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Common\DateTimePicker\DatePicker.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\Common\DateTimePicker\DatePicker.xaml

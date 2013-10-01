@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatumPrikker.UI.Frames.New;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,6 +22,12 @@ namespace DatumPrikker.UI.AppBarControls
         public AddAddressButtonUserControl()
         {
             this.InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(AddAddress));
         }
     }
 }

@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-09-30T11:09:52.746</Modified>
+      <Modified>2013-10-01T11:05:16.261</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.exe">
       <PackagePath>DatumPrikker.UI.exe</PackagePath>
-      <Modified>2013-09-30T11:42:26.321</Modified>
+      <Modified>2013-10-01T12:13:26.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\DatumPrikker.UI.pdb">
       <PackagePath>DatumPrikker.UI.pdb</PackagePath>
-      <Modified>2013-09-30T11:42:26.289</Modified>
+      <Modified>2013-10-01T12:13:26.560</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -62,7 +62,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppBarControls\AddAddressButtonUserControl.xaml">
       <PackagePath>AppBarControls\AddAddressButtonUserControl.xaml</PackagePath>
-      <Modified>2013-09-30T09:04:05.545</Modified>
+      <Modified>2013-10-01T11:11:23.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppBarControls\CancelButtonUserControl.xaml">
       <PackagePath>AppBarControls\CancelButtonUserControl.xaml</PackagePath>
@@ -88,6 +88,10 @@
       <PackagePath>AppBarControls\EditButtonUserControl.xaml</PackagePath>
       <Modified>2013-09-30T08:50:16.207</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Common\DateTimePicker\DatePicker.xaml">
+      <PackagePath>Common\DateTimePicker\DatePicker.xaml</PackagePath>
+      <Modified>2013-10-01T09:55:03.799</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
       <Modified>2013-09-30T11:09:48.622</Modified>
@@ -98,7 +102,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\Dashboard.xaml">
       <PackagePath>Frames\Dashboard.xaml</PackagePath>
-      <Modified>2013-09-30T09:11:34.888</Modified>
+      <Modified>2013-10-01T12:06:30.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\New\AddAddress.xaml">
+      <PackagePath>Frames\New\AddAddress.xaml</PackagePath>
+      <Modified>2013-10-01T12:13:23.081</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\New\AddRequests.xaml">
+      <PackagePath>Frames\New\AddRequests.xaml</PackagePath>
+      <Modified>2013-10-01T07:57:03.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\Register.xaml">
       <PackagePath>Frames\Register.xaml</PackagePath>
@@ -110,7 +122,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-09-30T08:48:41.698</Modified>
+      <Modified>2013-10-01T12:02:25.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\SettingsFlyout\HelpFlyout.xaml">
       <PackagePath>SettingsFlyout\HelpFlyout.xaml</PackagePath>
@@ -122,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-09-30T11:09:52.594</Modified>
+      <Modified>2013-10-01T11:05:16.010</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

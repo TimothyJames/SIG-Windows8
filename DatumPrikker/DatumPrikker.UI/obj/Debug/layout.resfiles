@@ -11,9 +11,12 @@ AppBarControls\EditButtonUserControl.xaml
 AppBarControls\HelpButtonUserControl.xaml
 AppBarControls\SaveButtonUserControl.xaml
 AppBarControls\SignOutButtonUserControl.xaml
+Common\DateTimePicker\DatePicker.xaml
 Common\StandardStyles.xaml
 Frames\AddressBook.xaml
 Frames\Dashboard.xaml
+Frames\New\AddAddress.xaml
+Frames\New\AddRequests.xaml
 Frames\Register.xaml
 Frames\Requests.xaml
 MainPage.xaml

@@ -65,6 +65,9 @@
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppBarControls\EditButtonUserControl.xaml">
       <PackagePath>AppBarControls\EditButtonUserControl.xaml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Common\DateTimePicker\DatePicker.xaml">
+      <PackagePath>Common\DateTimePicker\DatePicker.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>
@@ -73,6 +76,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\Dashboard.xaml">
       <PackagePath>Frames\Dashboard.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\New\AddAddress.xaml">
+      <PackagePath>Frames\New\AddAddress.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\New\AddRequests.xaml">
+      <PackagePath>Frames\New\AddRequests.xaml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\Frames\Register.xaml">
       <PackagePath>Frames\Register.xaml</PackagePath>
