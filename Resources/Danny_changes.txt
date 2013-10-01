@@ -1,0 +1,34 @@
+Wijzigingen:
+
+Settings Charm:
+2 pagina's aangemaakt voor settings
+1) standardFlyout:
+	Deze is bedoeld om straks eventuele instellingen die binnen de applicatie gedaan kunnen worden, hier te plaatsen.
+	(Een voorbeeld om de achtergrond te wijzigen, deze zit er nu in, je moet wel goed kijken om het resultaat te zien, wijzigingen worden nog niet opgeslagen)
+2) HelpFlyout
+	Deze zorgt ervoor om extra informatie te geven, we kunnen hem ook nog afhankelijk maken van op welke pagina de applicatie op dat moment staat.
+	(op dit moment benoemd hij de pagina waar hij op staat met de tekst er bij "The " + pagename + " stands for a lot")
+
+
+AppBar:
+In de map AppBarControls, staan een aantal UserControls.
+Deze kunnen dan vervolgens in het <Page.BottomAppBar> geplaatst worden. 
+Mochten er bepaalde knoppen op meerdere pagina's toegevoegd worden (zoals de logout knop) wordt deze overal in 1 keer gewijzigd worden.
+Op elke pagina moet appart vermeld worden wat er in de <Page.BottomAppBar> geplaatst moet worden.
+
+
+Error met Snap view:
+Er was een error zodra je de applicatie in snap view wilde zien. 
+In de VisualState kan je per object aangeven hoe deze er dan de betreffende view er uit moet komen te zien.
+Hier stonden op verschillende pagina's verkeerde TargetName's dus met het omzetten naar snap view kon hij deze objecten niet vinden.
+Overal aangepast en getest, nu klapt hij er niet meer uit zodra je van view veranderd.
+!!! wel moet hiervoor nog de styling gemaakt worden van wat er op de pagina staat !!!
+
+
+DateTimePicker: (Alleen nog datum selectie gemaakt)
+In de versie die wij hanteren bestaat nog geen DateTimePicker.
+In de nieuwere versie (windows 8.1 met VS2013 geloof ik) is deze wel aanwezig, maar dan kan het project niet meer in VS2012 geopend worden.
+Een kleine DatePicker gemaakt.
+Deze picker pakt van de windows settings hoe hij de secties (maand, dag, jaar) moet plaatsen. (dit kan bijvoorbeeld "MM-dd-yyyy" of "dd-MM-yyyy" zijn)
+Op basis van het DateTime object van C# wordt bepaald van welke maand geselecteerd is hoeveel dagen er in de selectie mogen zitten.
+Onder de selecties staat bij welk maan/dag het is. Bij jaar staat er een s=daylightsavingtime, n=normaal, l=schikkeljaar/leapyear.
