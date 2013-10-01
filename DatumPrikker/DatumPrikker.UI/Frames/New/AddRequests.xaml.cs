@@ -19,9 +19,9 @@ namespace DatumPrikker.UI.Frames.New
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class AddRequests : DatumPrikker.UI.Common.LayoutAwarePage
+    public sealed partial class AddRequest : DatumPrikker.UI.Common.LayoutAwarePage
     {
-        public AddRequests()
+        public AddRequest()
         {
             this.InitializeComponent();
         }

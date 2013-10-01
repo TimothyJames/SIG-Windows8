@@ -10,6 +10,6 @@
     d:DesignWidth="100">
     
     <Grid>
-        <Button x:Name="AddRequest" Style="{StaticResource AddRequestAppBarButtonStyle}" Tag="Add Request"/>
+        <Button x:Name="AddRequest" Style="{StaticResource AddRequestAppBarButtonStyle}" Tag="Add Request" Click="btnAdd_Click"/>
     </Grid>
 </UserControl>

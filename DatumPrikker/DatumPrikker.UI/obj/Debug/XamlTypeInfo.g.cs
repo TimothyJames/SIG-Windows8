@@ -138,7 +138,7 @@ namespace DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo
 
         private object Activate_14_AddAddress() { return new global::DatumPrikker.UI.Frames.New.AddAddress(); }
 
-        private object Activate_15_AddRequests() { return new global::DatumPrikker.UI.Frames.New.AddRequests(); }
+        private object Activate_15_AddRequest() { return new global::DatumPrikker.UI.Frames.New.AddRequest(); }
 
         private object Activate_16_Register() { return new global::DatumPrikker.UI.Frames.Register(); }
 
@@ -279,9 +279,9 @@ namespace DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case "DatumPrikker.UI.Frames.New.AddRequests":
-                userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.Frames.New.AddRequests), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
-                userType.Activator = Activate_15_AddRequests;
+            case "DatumPrikker.UI.Frames.New.AddRequest":
+                userType = new global::DatumPrikker.UI.DatumPrikker_UI_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DatumPrikker.UI.Frames.New.AddRequest), GetXamlTypeByName("DatumPrikker.UI.Common.LayoutAwarePage"));
+                userType.Activator = Activate_15_AddRequest;
                 xamlType = userType;
                 break;
 

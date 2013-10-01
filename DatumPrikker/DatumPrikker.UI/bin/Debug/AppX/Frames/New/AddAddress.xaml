@@ -31,8 +31,8 @@
             <Button x:ConnectionId='1' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Add Address" Style="{StaticResource PageHeaderTextStyle}" />
         </Grid>
-        <StackPanel x:Name="WhenPanel" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,0,0,0">
-            <TextBlock HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="Wanneer" VerticalAlignment="Top" Width="159"/>
+        <StackPanel x:Name="BirthPanel" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,0,0,0">
+            <TextBlock HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="Geboren" VerticalAlignment="Top" Width="159"/>
             <DatePicker:DatePicker />
         </StackPanel>
 
