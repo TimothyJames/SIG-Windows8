@@ -8,3 +8,16 @@ C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataM
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.csprojResolveAssemblyReference.cache
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.dll
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.pdb
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\DatumPrikker.DataModel.dll.config
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\DatumPrikker.DataModel.dll
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\DatumPrikker.DataModel.pdb
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\EntityFramework.dll
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\EntityFramework.xml
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.dll
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.pdb
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\310049511\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.DataModel\obj\Debug\DatumPrikker.DataModel.csprojResolveAssemblyReference.cache
