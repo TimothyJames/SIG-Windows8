@@ -15,7 +15,7 @@
     <PackageCertificateKeyFile>DatumPrikker.UI_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -116,6 +116,9 @@
     <Compile Include="AppBarControls\CancelButtonUserControl.xaml.cs">
       <DependentUpon>CancelButtonUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AppBarControls\DeleteAllAddressButtonUserControl.xaml.cs">
+      <DependentUpon>DeleteAllAddressButtonUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppBarControls\SignOutButtonUserControl.xaml.cs">
       <DependentUpon>SignOutButtonUserControl.xaml</DependentUpon>
     </Compile>
@@ -137,10 +140,16 @@
     <Compile Include="Common\DateTimePicker\DatePicker.xaml.cs">
       <DependentUpon>DatePicker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\DBObjects.cs" />
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SettingsCharm.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Extensions\FieldValidationExtensions.cs" />
+    <Compile Include="Extensions\FieldValidationHandler.cs" />
+    <Compile Include="Extensions\PasswordBoxFormatValidationHandler.cs" />
+    <Compile Include="Extensions\TextBoxFormatValidationHandler.cs" />
+    <Compile Include="Extensions\ValidationChecks.cs" />
     <Compile Include="Frames\AddressBook.xaml.cs">
       <DependentUpon>AddressBook.xaml</DependentUpon>
     </Compile>
@@ -169,12 +178,15 @@
     <Compile Include="SettingsFlyout\StandardFlyout.xaml.cs">
       <DependentUpon>StandardFlyout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="DatumPrikker.UI_TemporaryKey.pfx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
@@ -197,6 +209,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="AppBarControls\CancelButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\DeleteAllAddressButtonUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -264,6 +280,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, Version=11.0">
+      <Name>Microsoft Visual C++ Runtime Package</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WinRT, Version=3.8.1">
+      <Name>SQLite for Windows Runtime</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

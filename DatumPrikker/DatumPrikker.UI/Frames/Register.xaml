@@ -33,7 +33,17 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Register as new user" Style="{StaticResource PageHeaderTextStyle}" />
         </Grid>
 
-        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Username" FontFamily="Segoe UI" FontSize="16" />
+            <TextBox Name="RegisterUserName" Width="300" />
+            <TextBlock Text="Password" FontFamily="Segoe UI" FontSize="16"  />
+            <PasswordBox Name="RegisterPassword" />
+            <TextBlock Text="Email" FontFamily="Segoe UI" FontSize="16" />
+            <TextBox Name="RegisterEmail" Width="300" />
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Name="btnRegister" Content="Register" HorizontalAlignment="Center" Click="btnRegister_Click"/>
         </StackPanel>
 

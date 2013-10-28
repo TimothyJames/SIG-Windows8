@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatumPrikker.UI.Data;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace DatumPrikker.UI.Frames
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            BindAddressBook();
         }
 
         /// <summary>
@@ -54,6 +56,27 @@ namespace DatumPrikker.UI.Frames
         private void btnAddressBook_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AddressBook));
+        }
+
+        private void BindAddressBook()
+        {
+            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            using (var db = new SQLite.SQLiteConnection(dbPath))
+            {
+                db.CreateTable<AddressBookEntree>();
+
+                var addressquery = (from x in db.Table<AddressBookEntree>()
+                                   where  x.OwnerUserID == App.loggedInUser.Id select x).ToArray();
+
+                var tempquery = addressquery.Select(x=>x.EntreeUserID).ToArray();
+
+                var userquery = (from x in db.Table<User>()
+                                 where tempquery.Contains(x.Id) select x).ToArray();
+
+
+                AdressBookItems.ItemsSource = userquery;
+
+            }
         }
     }
 }

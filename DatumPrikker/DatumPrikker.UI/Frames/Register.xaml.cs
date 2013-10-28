@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatumPrikker.UI.Data;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -48,6 +49,18 @@ namespace DatumPrikker.UI.Frames
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
+
+            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            using (var db = new SQLite.SQLiteConnection(dbPath))
+            {
+                db.CreateTable<User>();
+     
+               db.RunInTransaction(() =>
+                   {
+                        db.Insert(new User() { UserName = RegisterUserName.Text, PassWord = RegisterPassword.Password,EmailAddress = RegisterEmail.Text});
+                  });
+          }
+
             this.Frame.Navigate(typeof(Dashboard));
         }
     }

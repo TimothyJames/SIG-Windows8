@@ -1,4 +1,5 @@
 ﻿using DatumPrikker.UI.Common;
+using DatumPrikker.UI.Data;
 using DatumPrikker.UI.Frames;
 using System;
 using System.Collections.Generic;
@@ -79,7 +80,23 @@ namespace DatumPrikker.UI
 
         private void btnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Dashboard));
+            bool success = false;
+            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            using (var db = new SQLite.SQLiteConnection(dbPath))
+            {
+                db.CreateTable<User>();
+
+                var query = db.Table<User>().Where(x => x.UserName == LoginUserName.Text && x.PassWord == LoginPassWord.Password).FirstOrDefault();
+
+                success = !(query == null);
+
+
+                if (success)
+                {
+                    App.loggedInUser = query;
+                    this.Frame.Navigate(typeof(Dashboard));
+                }
+            }
         }
     }
 }

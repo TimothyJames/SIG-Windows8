@@ -24,6 +24,7 @@ namespace DatumPrikker.UI.AppBarControls
         }
         private void btnSignOut_Click(object sender, RoutedEventArgs e)
         {
+            App.loggedInUser = null;
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(MainPage));
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatumPrikker.UI.Data;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using WinRTXamlToolkit.Controls.Extensions;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -57,6 +59,33 @@ namespace DatumPrikker.UI.Frames.New
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (FieldValidationExtensions.GetIsValid(AddressbookUserName) && FieldValidationExtensions.GetIsValid(AddressbookEmail))
+            {
+
+                var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+                using (var db = new SQLite.SQLiteConnection(dbPath))
+                {
+                    db.CreateTable<AddressBookEntree>();
+
+                    User addressbookuser = new User();
+                    addressbookuser.UserName = AddressbookUserName.Text;
+                    addressbookuser.EmailAddress = AddressbookEmail.Text;
+
+                    db.RunInTransaction(() =>
+                    {
+                        db.Insert(addressbookuser);
+
+                        db.Insert(new AddressBookEntree() { OwnerUserID = App.loggedInUser.Id, EntreeUserID = addressbookuser.Id });
+                    });
+                }
+
+            }
+            
         }
     }
 }

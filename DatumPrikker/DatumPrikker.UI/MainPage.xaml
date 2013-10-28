@@ -28,13 +28,13 @@
         
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Username" FontFamily="Segoe UI" FontSize="16" />
-            <TextBox Width="300" />
+            <TextBox Name="LoginUserName" Width="300" />
             <TextBlock Text="Password" FontFamily="Segoe UI" FontSize="16"  />
-            <PasswordBox />
+            <PasswordBox Name="LoginPassWord" />
         </StackPanel>
         
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button Name="btnRegister" Content="Register" Click="btnRegister_Click" HorizontalAlignment="Center"/>
+            <Button Name="btnRegister" Content="Register" Click="btnRegister_Click" HorizontalAlignment="Center" />
             <Button Name="btnDashboard" Content="Log in" Click="btnDashboard_Click" HorizontalAlignment="Center" />
         </StackPanel>
 

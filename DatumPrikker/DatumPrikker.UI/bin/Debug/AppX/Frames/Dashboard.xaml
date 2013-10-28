@@ -47,6 +47,25 @@
 
             <TextBlock x:Name="RequestsList" Text="Requests list..." Grid.Column="1" />
             <TextBlock x:Name="AddressBookList" Text="Address Book list..." Grid.Column="2" />
+            <ListView x:Name="AdressBookItems" Grid.Column="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="110" Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                <Image Source="" Stretch="UniformToFill"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                <TextBlock Text="{Binding UserName}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
+                                <TextBlock Text="{Binding EmailAddress}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
