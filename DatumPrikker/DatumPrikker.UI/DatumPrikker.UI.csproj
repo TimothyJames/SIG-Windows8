@@ -116,6 +116,9 @@
     <Compile Include="AppBarControls\CancelButtonUserControl.xaml.cs">
       <DependentUpon>CancelButtonUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AppBarControls\DeleteAddressButtonUserControl.xaml.cs">
+      <DependentUpon>DeleteAddressButtonUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppBarControls\DeleteAllAddressButtonUserControl.xaml.cs">
       <DependentUpon>DeleteAllAddressButtonUserControl.xaml</DependentUpon>
     </Compile>
@@ -209,6 +212,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="AppBarControls\CancelButtonUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppBarControls\DeleteAddressButtonUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

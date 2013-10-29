@@ -41,7 +41,7 @@
                     Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=AddressbookUserName}"/>
 
             <TextBlock Text="Email address" FontFamily="Segoe UI" FontSize="16" />
-            <TextBox Name="AddressbookEmail" Width="300" Extensions:FieldValidationExtensions.Format="MatchesRegexPattern" Extensions:FieldValidationExtensions.Pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Extensions:FieldValidationExtensions.PatternErrorMessage="Please provide a valid email adress!"  />
+            <TextBox Name="AddressbookEmail" Width="300" Extensions:FieldValidationExtensions.Format="MatchesRegexPattern" Extensions:FieldValidationExtensions.Pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Extensions:FieldValidationExtensions.PatternErrorMessage="Please provide a valid email address!"  />
             <TextBlock
                     Text="{Binding (Extensions:FieldValidationExtensions.PatternErrorMessage), ElementName=AddressbookEmail}"
                     Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=AddressbookEmail}"/>

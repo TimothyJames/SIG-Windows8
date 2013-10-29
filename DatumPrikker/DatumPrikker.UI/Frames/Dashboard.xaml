@@ -45,9 +45,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock x:Name="RequestsList" Text="Requests list..." Grid.Column="1" />
-            <TextBlock x:Name="AddressBookList" Text="Address Book list..." Grid.Column="2" />
-            <ListView x:Name="AdressBookItems" Grid.Column="2">
+            <ListView x:Name="AdressBookItems" Grid.Column="2" SelectionChanged="AdressBookItems_SelectionChanged_1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid Height="110" Margin="6">
@@ -112,6 +110,7 @@
                 <StackPanel x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
                     <appbaritems:AddAddressButtonUserControl x:Name="AddAddress" />
                     <appbaritems:AddRequestButtonUserControl x:Name="AddRequest" />
+                    <appbaritems:DeleteAddressButtonUserControl x:Name="DeleteAddress" Visibility="Collapsed"/>
                 </StackPanel>
                 <StackPanel x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
                     <appbaritems:SignOutButtonUserControl x:Name="SignOutButton" />

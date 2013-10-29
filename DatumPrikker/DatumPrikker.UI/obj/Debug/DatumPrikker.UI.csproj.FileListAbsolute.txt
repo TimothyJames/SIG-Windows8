@@ -119,3 +119,6 @@ C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\ob
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\layout.resfiles.intermediate
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\resources.resfiles.intermediate
 C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\pri.resfiles.intermediate
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\AppBarControls\DeleteAddressButtonUserControl.g.i.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\AppBarControls\DeleteAddressButtonUserControl.g.cs
+C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\obj\Debug\AppBarControls\DeleteAddressButtonUserControl.xaml

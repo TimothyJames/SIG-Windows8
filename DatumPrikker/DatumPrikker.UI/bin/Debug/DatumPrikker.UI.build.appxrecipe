@@ -56,6 +56,9 @@
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppBarControls\CancelButtonUserControl.xaml">
       <PackagePath>AppBarControls\CancelButtonUserControl.xaml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppBarControls\DeleteAddressButtonUserControl.xaml">
+      <PackagePath>AppBarControls\DeleteAddressButtonUserControl.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Developer\Documents\GitHub\SIG-Windows8\DatumPrikker\DatumPrikker.UI\bin\Debug\AppBarControls\DeleteAllAddressButtonUserControl.xaml">
       <PackagePath>AppBarControls\DeleteAllAddressButtonUserControl.xaml</PackagePath>
     </AppxPackagedFile>

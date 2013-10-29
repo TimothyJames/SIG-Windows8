@@ -25,7 +25,9 @@ namespace DatumPrikker.UI.Frames
         public Dashboard()
         {
             this.InitializeComponent();
+            DeleteAddress.DeleteAddressEvent += DeleteAddress_DeleteAddressEvent;
         }
+
 
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
@@ -36,6 +38,22 @@ namespace DatumPrikker.UI.Frames
         {
             base.OnNavigatedTo(e);
             BindAddressBook();
+       }
+
+        private void DeleteAddress_DeleteAddressEvent()
+        {
+            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            using (var db = new SQLite.SQLiteConnection(dbPath))
+            {
+                    db.RunInTransaction(() =>
+                    {
+                        foreach (User user in AdressBookItems.SelectedItems)
+                        {
+                            db.Delete(user);
+                        }
+                    });
+                    BindAddressBook();        
+            }
         }
 
         /// <summary>
@@ -76,6 +94,18 @@ namespace DatumPrikker.UI.Frames
 
                 AdressBookItems.ItemsSource = userquery;
 
+            }
+        }
+
+        private void AdressBookItems_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (AdressBookItems.SelectedItems.Count > 0)
+            {
+                DeleteAddress.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
+            else
+            {
+                DeleteAddress.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             }
         }
     }
