@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using WinRTXamlToolkit.Controls.Extensions;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -49,19 +50,21 @@ namespace DatumPrikker.UI.Frames
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-
-            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
-            using (var db = new SQLite.SQLiteConnection(dbPath))
+            if (FieldValidationExtensions.GetIsValid(RegisterUserName) && FieldValidationExtensions.GetIsValid(RegisterPassword) && FieldValidationExtensions.GetIsValid(RegisterEmail))
             {
-                db.CreateTable<User>();
-     
-               db.RunInTransaction(() =>
-                   {
-                        db.Insert(new User() { UserName = RegisterUserName.Text, PassWord = RegisterPassword.Password,EmailAddress = RegisterEmail.Text});
-                  });
-          }
+                var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+                using (var db = new SQLite.SQLiteConnection(dbPath))
+                {
+                    db.CreateTable<User>();
 
-            this.Frame.Navigate(typeof(Dashboard));
+                    db.RunInTransaction(() =>
+                        {
+                            db.Insert(new User() { UserName = RegisterUserName.Text, PassWord = RegisterPassword.Password, EmailAddress = RegisterEmail.Text });
+                        });
+                }
+
+                this.Frame.Navigate(typeof(Dashboard));
+            }
         }
     }
 }

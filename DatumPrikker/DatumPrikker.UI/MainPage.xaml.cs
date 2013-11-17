@@ -80,6 +80,7 @@ namespace DatumPrikker.UI
 
         private void btnDashboard_Click(object sender, RoutedEventArgs e)
         {
+            tbError.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             bool success = false;
             var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
             using (var db = new SQLite.SQLiteConnection(dbPath))
@@ -95,6 +96,10 @@ namespace DatumPrikker.UI
                 {
                     App.loggedInUser = query;
                     this.Frame.Navigate(typeof(Dashboard));
+                }
+                else
+                {
+                    tbError.Visibility = Windows.UI.Xaml.Visibility.Visible;
                 }
             }
         }
