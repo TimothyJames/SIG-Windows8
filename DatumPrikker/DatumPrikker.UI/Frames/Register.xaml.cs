@@ -63,7 +63,7 @@ namespace DatumPrikker.UI.Frames
                         });
                 }
 
-                this.Frame.Navigate(typeof(Dashboard));
+                this.Frame.Navigate(typeof(MainPage));
             }
         }
     }

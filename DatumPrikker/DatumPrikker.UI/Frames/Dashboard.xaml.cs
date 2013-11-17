@@ -81,19 +81,26 @@ namespace DatumPrikker.UI.Frames
             var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
             using (var db = new SQLite.SQLiteConnection(dbPath))
             {
-                db.CreateTable<AddressBookEntree>();
+                try
+                {
+                    db.CreateTable<AddressBookEntree>();
 
-                var addressquery = (from x in db.Table<AddressBookEntree>()
-                                   where  x.OwnerUserID == App.loggedInUser.Id select x).ToArray();
+                    var addressquery = (from x in db.Table<AddressBookEntree>()
+                                        where x.OwnerUserID == App.loggedInUser.Id
+                                        select x).ToArray();
 
-                var tempquery = addressquery.Select(x=>x.EntreeUserID).ToArray();
+                    var tempquery = addressquery.Select(x => x.EntreeUserID).ToArray();
 
-                var userquery = (from x in db.Table<User>()
-                                 where tempquery.Contains(x.Id) select x).ToArray();
+                    var userquery = (from x in db.Table<User>()
+                                     where tempquery.Contains(x.Id)
+                                     select x).ToArray();
 
 
-                AdressBookItems.ItemsSource = userquery;
-
+                    AdressBookItems.ItemsSource = userquery;
+                }
+                catch (Exception ex)
+                {
+                }
             }
         }
 
