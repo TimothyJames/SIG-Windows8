@@ -296,6 +296,11 @@
       <Name>SQLite for Windows Runtime</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WinRTDatePicker">
+      <HintPath>..\packages\WinRT-DatePicker.1.1\lib\netcore45\WinRTDatePicker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>

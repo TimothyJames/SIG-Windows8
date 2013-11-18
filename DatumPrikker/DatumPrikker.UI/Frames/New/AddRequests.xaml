@@ -6,7 +6,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DatumPrikker.UI.Frames"
     xmlns:common="using:DatumPrikker.UI.Common"
-    xmlns:DatePicker="using:DatumPrikker.UI.Common.DateTimePicker"
+    xmlns:Extensions="using:WinRTXamlToolkit.Controls.Extensions"
+    xmlns:DatePicker="using:WinRTDatePicker"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -14,7 +15,8 @@
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="440"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
         <Grid>
@@ -25,11 +27,45 @@
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Add Requests" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
-        <StackPanel x:Name="WhenPanel" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,0,0,0">
-            <TextBlock HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="Wanneer" VerticalAlignment="Top" Width="159"/>
-            <DatePicker:DatePicker />
+        <StackPanel x:Name="BirthPanel" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Title" FontFamily="Segoe UI" FontSize="16" />
+            <TextBox Name="RequestTitle"  Width="300"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
+            <TextBlock
+                    Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RequestTitle}"
+                    Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RequestTitle}"/>
+            <TextBlock Text="Location" FontFamily="Segoe UI" FontSize="16" />
+            <TextBox Name="RequestLocation"  Width="300"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
+            <TextBlock
+                    Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RequestLocation}"
+                    Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RequestLocation}"/>
+            <TextBlock Text="Description" FontFamily="Segoe UI" FontSize="16" />
+            <TextBox Name="RequestDescription"  Width="300"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
+            <TextBlock
+                    Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RequestDescription}"
+                    Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RequestDescription}"/>
+            <TextBlock Text="Date" FontFamily="Segoe UI" FontSize="16"/>
+            <DatePicker:DatePicker Name="RequestDate" />
+            
+            <TextBlock Text="Addresses" FontFamily="Segoe UI" FontSize="16" />
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+                <ItemsControl Name="Addresses" Height="130">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <CheckBox Margin="2" Content="{Binding UserName}" ToolTipService.ToolTip="{Binding UserName}" IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                            <TextBlock Text="{Binding Id}" Visibility="Collapsed" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
         </StackPanel>
-        
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button Name="btnAdd" Content="Add" Click="btnAdd_Click" HorizontalAlignment="Center" />
+        </StackPanel>
+
+     
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->

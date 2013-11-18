@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DatumPrikker.UI.Data;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using Windows.Foundation;
@@ -11,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using WinRTXamlToolkit.Controls.Extensions;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -21,6 +25,8 @@ namespace DatumPrikker.UI.Frames.New
     /// </summary>
     public sealed partial class AddRequest : DatumPrikker.UI.Common.LayoutAwarePage
     {
+        private ObservableCollection<UserSelected> mUsersSelected = null;
+
         public AddRequest()
         {
             this.InitializeComponent();
@@ -34,6 +40,7 @@ namespace DatumPrikker.UI.Frames.New
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            BindCheckboxes();
         }
 
         /// <summary>
@@ -68,5 +75,121 @@ namespace DatumPrikker.UI.Frames.New
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            if (FieldValidationExtensions.GetIsValid(RequestTitle) && FieldValidationExtensions.GetIsValid(RequestLocation) && FieldValidationExtensions.GetIsValid(RequestDescription))
+            {
+
+                var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+                using (var db = new SQLite.SQLiteConnection(dbPath))
+                {
+                        db.CreateTable<Appointment>();
+                        db.CreateTable<AppointmentInvitee>();
+
+                        Appointment appointment = new Appointment();
+                        appointment.Title = RequestTitle.Text;
+                        appointment.Location = RequestLocation.Text;
+                        appointment.Description = RequestDescription.Text;
+                        appointment.Date = RequestDate.SelectedDate;
+                        appointment.OwnerUserID = App.loggedInUser.Id;
+
+                        db.RunInTransaction(() =>
+                        {
+                            db.Insert(appointment);
+
+                            foreach (UserSelected item in mUsersSelected)
+                            {
+                                if (item.IsSelected)
+                                {
+                                    db.Insert(new AppointmentInvitee() { OwnerUserID = App.loggedInUser.Id, InviteeAppointmentID = appointment.Id, InviteeUserID = item.Id });
+                                }
+                            }
+                         });
+   
+                }
+
+                this.Frame.Navigate(typeof(Dashboard));
+            }
+
+        }
+
+        private void BindCheckboxes()
+        {
+            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            using (var db = new SQLite.SQLiteConnection(dbPath))
+            {
+
+                db.CreateTable<AddressBookEntree>();
+
+                var addressquery = (from x in db.Table<AddressBookEntree>()
+                                    where x.OwnerUserID == App.loggedInUser.Id
+                                    select x).ToArray();
+
+                var tempquery = addressquery.Select(x => x.EntreeUserID).ToArray();
+
+                var userquery = (from x in db.Table<User>()
+                                 where tempquery.Contains(x.Id)
+                                 select x).ToList();
+
+                mUsersSelected = new ObservableCollection<UserSelected>();
+                foreach (var item in userquery)
+                {
+                    mUsersSelected.Add(new UserSelected(item.Id,item.UserName));
+                }
+
+                Addresses.ItemsSource = mUsersSelected;
+
+            }
+        }
+    }
+
+    internal class UserSelected : INotifyPropertyChanged
+    {
+        public UserSelected(int id,string username)
+        {
+            mId = id;
+            mUserName = username;
+            IsSelected = false;
+        }
+
+        private int mId;
+        private string mUserName;
+        private bool mIsSelected;
+
+        public int Id
+        {
+            get { return mId; }
+        }
+
+        public string UserName
+        {
+            get { return mUserName; }
+            set
+            {
+                mUserName = value;
+            }
+        }
+
+        
+        public bool IsSelected
+        {
+            get { return mIsSelected; }
+            set
+            {
+                mIsSelected = value;
+                OnPropertyChanged("IsSelected");
+            }
+        }
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

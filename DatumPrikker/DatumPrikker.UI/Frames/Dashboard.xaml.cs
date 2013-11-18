@@ -37,6 +37,7 @@ namespace DatumPrikker.UI.Frames
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            BindRequests();
             BindAddressBook();
        }
 
@@ -52,6 +53,7 @@ namespace DatumPrikker.UI.Frames
                             db.Delete(user);
                         }
                     });
+                    BindRequests();
                     BindAddressBook();        
             }
         }
@@ -81,8 +83,6 @@ namespace DatumPrikker.UI.Frames
             var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
             using (var db = new SQLite.SQLiteConnection(dbPath))
             {
-                try
-                {
                     db.CreateTable<AddressBookEntree>();
 
                     var addressquery = (from x in db.Table<AddressBookEntree>()
@@ -97,10 +97,22 @@ namespace DatumPrikker.UI.Frames
 
 
                     AdressBookItems.ItemsSource = userquery;
-                }
-                catch (Exception ex)
-                {
-                }
+            }
+        }
+
+        private void BindRequests()
+        {
+            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            using (var db = new SQLite.SQLiteConnection(dbPath))
+            {
+                db.CreateTable<Appointment>();
+
+                var appoinmentquery = (from x in db.Table<Appointment>()
+                                    where x.OwnerUserID == App.loggedInUser.Id
+                                    orderby x.Date
+                                    select x).ToArray();
+
+                RequestItems.ItemsSource = appoinmentquery;
             }
         }
 
