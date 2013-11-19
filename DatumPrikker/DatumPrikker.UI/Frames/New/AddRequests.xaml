@@ -29,22 +29,22 @@
         </Grid>
         <StackPanel x:Name="BirthPanel" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Title" FontFamily="Segoe UI" FontSize="16" />
-            <TextBox Name="RequestTitle"  Width="300"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
+            <TextBox Name="RequestTitle"  Width="340"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
             <TextBlock
                     Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RequestTitle}"
                     Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RequestTitle}"/>
             <TextBlock Text="Location" FontFamily="Segoe UI" FontSize="16" />
-            <TextBox Name="RequestLocation"  Width="300"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
+            <TextBox Name="RequestLocation"  Width="340"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
             <TextBlock
                     Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RequestLocation}"
                     Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RequestLocation}"/>
             <TextBlock Text="Description" FontFamily="Segoe UI" FontSize="16" />
-            <TextBox Name="RequestDescription"  Width="300"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
+            <TextBox Name="RequestDescription"  Width="340"  Extensions:FieldValidationExtensions.Format="NonEmpty" />
             <TextBlock
                     Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RequestDescription}"
                     Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RequestDescription}"/>
             <TextBlock Text="Date" FontFamily="Segoe UI" FontSize="16"/>
-            <DatePicker:DatePicker Name="RequestDate" />
+            <DatePicker:DatePicker Name="RequestDate" Width="340" FontFamily="Segoe UI" FontSize="16"/>
             
             <TextBlock Text="Addresses" FontFamily="Segoe UI" FontSize="16" />
             <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">

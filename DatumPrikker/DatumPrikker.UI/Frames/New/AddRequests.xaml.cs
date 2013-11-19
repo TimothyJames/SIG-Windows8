@@ -40,7 +40,21 @@ namespace DatumPrikker.UI.Frames.New
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            BindCheckboxes();
+
+            if (App.SelectedRequest != null)
+            {
+                btnAdd.Visibility = Windows.UI.Xaml.Visibility.Collapsed; //do not show add we are in view mode
+
+                RequestTitle.Text = App.SelectedRequest.Title;
+                RequestLocation.Text = App.SelectedRequest.Location;
+                RequestDescription.Text = App.SelectedRequest.Description;
+                RequestDate.SelectedDate = App.SelectedRequest.Date;
+
+            }
+            else
+            {
+                BindCheckboxes();
+            }
         }
 
         /// <summary>

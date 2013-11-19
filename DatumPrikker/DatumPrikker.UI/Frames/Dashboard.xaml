@@ -45,7 +45,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <ListView x:Name="RequestItems" Grid.Column="1">
+            <ListView x:Name="RequestItems" Grid.Column="1" SelectionChanged="RequestItems_SelectionChanged_1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid Height="110" Margin="6">
@@ -132,6 +132,7 @@
                     <Button Style="{StaticResource ContactAppBarButtonStyle}" Click="btnAddressBook_Click"></Button>
                     <appbaritems:AddRequestButtonUserControl x:Name="AddRequest" />
                     <appbaritems:DeleteAddressButtonUserControl x:Name="DeleteAddress" Visibility="Collapsed"/>
+                    <appbaritems:DeleteRequestButtonUserControl x:Name="DeleteRequest" Visibility="Collapsed"/>
                     <Button Style="{StaticResource SaveAppBarButtonStyle}" Click="btnRequests_Click"></Button>
                 </StackPanel>
                 <StackPanel x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">

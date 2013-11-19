@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DatumPrikker.UI.Common;
+using DatumPrikker.UI.Data;
+using DatumPrikker.UI.Frames.New;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,6 +32,8 @@ namespace DatumPrikker.UI.Frames
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            AdressBookItems.ItemsSource = GetData.BindAddressBook();
+        
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -58,5 +63,13 @@ namespace DatumPrikker.UI.Frames
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+
+        private void AdressBookItems_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            App.SelectedAddress = (User)AdressBookItems.SelectedItem;
+
+            this.Frame.Navigate(typeof(AddAddress));
+        }
+
     }
 }

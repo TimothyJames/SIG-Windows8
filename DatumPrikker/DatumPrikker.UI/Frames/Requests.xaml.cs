@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DatumPrikker.UI.Common;
+using DatumPrikker.UI.Data;
+using DatumPrikker.UI.Frames.New;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,6 +37,8 @@ namespace DatumPrikker.UI.Frames
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+
+            RequestItems.ItemsSource = GetData.BindRequests();
         }
 
         /// <summary>
@@ -67,6 +72,13 @@ namespace DatumPrikker.UI.Frames
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+        }
+
+        private void RequestItems_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            App.SelectedRequest = (Appointment)RequestItems.SelectedItem;
+
+            this.Frame.Navigate(typeof(AddRequest));
         }
     }
 }
