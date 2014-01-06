@@ -48,6 +48,13 @@ namespace DatumPrikker.UI.Frames
             base.OnNavigatedFrom(e);
         }
 
+        private void CheckEnter(object sender, KeyRoutedEventArgs e)
+        {
+            // if enter is pressed try to login.
+            if (e.Key == Windows.System.VirtualKey.Enter)
+                btnRegister_Click(sender, new RoutedEventArgs());
+        }
+
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             if (FieldValidationExtensions.GetIsValid(RegisterUserName) && FieldValidationExtensions.GetIsValid(RegisterPassword) && FieldValidationExtensions.GetIsValid(RegisterEmail))

@@ -78,6 +78,13 @@ namespace DatumPrikker.UI
             this.Frame.Navigate(typeof(Register));
         }
 
+        private void CheckEnter(object sender, KeyRoutedEventArgs e)
+        {
+            // if enter is pressed try to login.
+            if (e.Key == Windows.System.VirtualKey.Enter)
+                btnDashboard_Click(sender, new RoutedEventArgs());
+        }
+
         private void btnDashboard_Click(object sender, RoutedEventArgs e)
         {
             tbError.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
