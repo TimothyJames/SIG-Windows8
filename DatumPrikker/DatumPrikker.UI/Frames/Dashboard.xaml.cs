@@ -1,4 +1,5 @@
-﻿using DatumPrikker.UI.Data;
+﻿using DatumPrikker.UI.Common;
+using DatumPrikker.UI.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,8 +27,8 @@ namespace DatumPrikker.UI.Frames
         {
             this.InitializeComponent();
             DeleteAddress.DeleteAddressEvent += DeleteAddress_DeleteAddressEvent;
+            DeleteRequest.DeleteRequestEvent += DeleteRequest_DeleteRequestEvent;
         }
-
 
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
@@ -37,8 +38,8 @@ namespace DatumPrikker.UI.Frames
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            BindAddressBook();
-       }
+            BindLists();
+        }
 
         private void DeleteAddress_DeleteAddressEvent()
         {
@@ -52,9 +53,28 @@ namespace DatumPrikker.UI.Frames
                             db.Delete(user);
                         }
                     });
-                    BindAddressBook();        
+                    BindLists();
             }
         }
+
+        void DeleteRequest_DeleteRequestEvent()
+        {
+            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            using (var db = new SQLite.SQLiteConnection(dbPath))
+            {
+                db.RunInTransaction(() =>
+                {
+                    foreach (Appointment appointment in RequestItems.SelectedItems)
+                    {
+                        db.Delete(appointment);
+                    }
+                });
+
+                BindLists();
+
+            }
+        }
+
 
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
@@ -76,26 +96,12 @@ namespace DatumPrikker.UI.Frames
             this.Frame.Navigate(typeof(AddressBook));
         }
 
-        private void BindAddressBook()
+        private void BindLists()
         {
-            var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
-            using (var db = new SQLite.SQLiteConnection(dbPath))
-            {
-                db.CreateTable<AddressBookEntree>();
-
-                var addressquery = (from x in db.Table<AddressBookEntree>()
-                                   where  x.OwnerUserID == App.loggedInUser.Id select x).ToArray();
-
-                var tempquery = addressquery.Select(x=>x.EntreeUserID).ToArray();
-
-                var userquery = (from x in db.Table<User>()
-                                 where tempquery.Contains(x.Id) select x).ToArray();
-
-
-                AdressBookItems.ItemsSource = userquery;
-
-            }
+            RequestItems.ItemsSource = GetData.BindRequests();
+            AdressBookItems.ItemsSource = GetData.BindAddressBook();
         }
+
 
         private void AdressBookItems_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
@@ -107,6 +113,19 @@ namespace DatumPrikker.UI.Frames
             {
                 DeleteAddress.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             }
+        }
+
+        private void RequestItems_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (RequestItems.SelectedItems.Count > 0)
+            {
+                DeleteRequest.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
+            else
+            {
+                DeleteRequest.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            }
+
         }
     }
 }

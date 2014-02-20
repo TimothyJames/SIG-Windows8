@@ -26,6 +26,7 @@ namespace DatumPrikker.UI.AppBarControls
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            App.SelectedAddress = null; // we are adding an address
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(AddAddress));
         }

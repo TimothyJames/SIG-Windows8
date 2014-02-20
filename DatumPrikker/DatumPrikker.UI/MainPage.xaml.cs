@@ -78,8 +78,16 @@ namespace DatumPrikker.UI
             this.Frame.Navigate(typeof(Register));
         }
 
+        private void CheckEnter(object sender, KeyRoutedEventArgs e)
+        {
+            // if enter is pressed try to login.
+            if (e.Key == Windows.System.VirtualKey.Enter)
+                btnDashboard_Click(sender, new RoutedEventArgs());
+        }
+
         private void btnDashboard_Click(object sender, RoutedEventArgs e)
         {
+            tbError.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             bool success = false;
             var dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
             using (var db = new SQLite.SQLiteConnection(dbPath))
@@ -95,6 +103,10 @@ namespace DatumPrikker.UI
                 {
                     App.loggedInUser = query;
                     this.Frame.Navigate(typeof(Dashboard));
+                }
+                else
+                {
+                    tbError.Visibility = Windows.UI.Xaml.Visibility.Visible;
                 }
             }
         }

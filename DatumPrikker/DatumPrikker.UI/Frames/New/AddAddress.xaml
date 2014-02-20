@@ -20,8 +20,8 @@
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="100"/>
             <!--<RowDefinition Height="100"/>-->
         </Grid.RowDefinitions>
 

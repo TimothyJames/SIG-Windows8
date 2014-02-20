@@ -19,8 +19,7 @@
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
-            <!--<RowDefinition Height="100"/>-->
+            <RowDefinition Height="440"/>
         </Grid.RowDefinitions>
 
         <Grid>
@@ -32,6 +31,26 @@
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Address Book" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
+
+        <ListView x:Name="AdressBookItems" Grid.Column="2" Grid.Row="2" SelectionChanged="AdressBookItems_SelectionChanged_1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="110" Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                <Image Source="" Stretch="UniformToFill"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                <TextBlock Text="{Binding UserName}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
+                                <TextBlock Text="{Binding EmailAddress}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
         <VisualStateManager.VisualStateGroups>
 

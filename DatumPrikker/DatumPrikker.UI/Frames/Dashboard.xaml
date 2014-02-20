@@ -45,6 +45,26 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <ListView x:Name="RequestItems" Grid.Column="1" SelectionChanged="RequestItems_SelectionChanged_1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="110" Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                <Image Source="" Stretch="UniformToFill"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
+                                <TextBlock Text="{Binding Date}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
             <ListView x:Name="AdressBookItems" Grid.Column="2" SelectionChanged="AdressBookItems_SelectionChanged_1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -109,8 +129,11 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
                     <appbaritems:AddAddressButtonUserControl x:Name="AddAddress" />
+                    <Button Style="{StaticResource ContactAppBarButtonStyle}" Click="btnAddressBook_Click"></Button>
                     <appbaritems:AddRequestButtonUserControl x:Name="AddRequest" />
                     <appbaritems:DeleteAddressButtonUserControl x:Name="DeleteAddress" Visibility="Collapsed"/>
+                    <appbaritems:DeleteRequestButtonUserControl x:Name="DeleteRequest" Visibility="Collapsed"/>
+                    <Button Style="{StaticResource SaveAppBarButtonStyle}" Click="btnRequests_Click"></Button>
                 </StackPanel>
                 <StackPanel x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
                     <appbaritems:SignOutButtonUserControl x:Name="SignOutButton" />

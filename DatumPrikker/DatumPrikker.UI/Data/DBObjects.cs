@@ -21,24 +21,26 @@ namespace DatumPrikker.UI.Data
 
     public class Appointment
     {
-        public int AppointmentID { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Location { get; set; }
         public string Description { get; set; }
+        public DateTime Date { get; set; }
 
-        public int? UserID { get; set; }
-        public User OwnerUser { get; set; }
-        public List<AppointmentDate> Dates { get; set; }
-        public List<AppointmentInvitee> Invitees { get; set; }
+        public int OwnerUserID { get; set; }
+        //public List<AppointmentDate> Dates { get; set; }
+        //public List<AppointmentInvitee> Invitees { get; set; }
     }
 
     public class AppointmentInvitee
     {
+        public int OwnerUserID { get; set; }
         public int InviteeUserID { get; set; }
         public int InviteeAppointmentID { get; set; }
 
-        public User User { get; set; }
-        public Appointment Appointment { get; set; }
+        //public User User { get; set; }
+        //public Appointment Appointment { get; set; }
     }
 
     public class AppointmentDate
@@ -49,7 +51,7 @@ namespace DatumPrikker.UI.Data
         public DateTime EndTime { get; set; }
 
         public int AppointmentID { get; set; }
-        public Appointment Appointment { get; set; }
+        //public Appointment Appointment { get; set; }
     }
 
     public class AddressBookEntree

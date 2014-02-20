@@ -26,6 +26,7 @@ namespace DatumPrikker.UI.AppBarControls
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            App.SelectedRequest = null; // we are adding an request
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(AddRequest));
         }

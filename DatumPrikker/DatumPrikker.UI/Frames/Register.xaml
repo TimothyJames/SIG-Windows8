@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DatumPrikker.UI.Frames"
     xmlns:common="using:DatumPrikker.UI.Common"
+     xmlns:Extensions="using:WinRTXamlToolkit.Controls.Extensions"
     xmlns:appbaritems="using:DatumPrikker.UI.AppBarControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -19,7 +20,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
@@ -35,11 +36,22 @@
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Username" FontFamily="Segoe UI" FontSize="16" />
-            <TextBox Name="RegisterUserName" Width="300" />
+            <TextBox Name="RegisterUserName" Width="300" KeyDown="CheckEnter" Extensions:FieldValidationExtensions.Format="NonEmpty"/>
+            <TextBlock
+                    Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RegisterUserName}"
+                    Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RegisterUserName}"/>
+
             <TextBlock Text="Password" FontFamily="Segoe UI" FontSize="16"  />
-            <PasswordBox Name="RegisterPassword" />
+            <PasswordBox Name="RegisterPassword" KeyDown="CheckEnter" Extensions:FieldValidationExtensions.Format="NonEmpty"/>
+            <TextBlock
+                    Text="{Binding (Extensions:FieldValidationExtensions.ValidationMessage), ElementName=RegisterPassword}"
+                    Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RegisterPassword}"/>
+
             <TextBlock Text="Email" FontFamily="Segoe UI" FontSize="16" />
-            <TextBox Name="RegisterEmail" Width="300" />
+            <TextBox Name="RegisterEmail" Width="300" KeyDown="CheckEnter" Extensions:FieldValidationExtensions.Format="MatchesRegexPattern" Extensions:FieldValidationExtensions.Pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Extensions:FieldValidationExtensions.PatternErrorMessage="Please provide a valid email address!"  />
+            <TextBlock
+                    Text="{Binding (Extensions:FieldValidationExtensions.PatternErrorMessage), ElementName=RegisterEmail}"
+                    Visibility="{Binding (Extensions:FieldValidationExtensions.ValidationMessageVisibility), ElementName=RegisterEmail}"/>
         </StackPanel>
 
 
